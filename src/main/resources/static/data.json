@@ -1,0 +1,17 @@
+[
+  {
+  "productCode": "PROD1",
+  "name": "Laptop",
+  "fullPrice": 999.99
+  },
+  {
+    "productCode": "PROD2",
+    "name": "Mouse",
+    "fullPrice": 29.99
+  },
+    {
+        "productCode": "PROD3",
+        "name": "Keyboard",
+        "fullPrice": 79.99
+    }
+]

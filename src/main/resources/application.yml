@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: server
+server:
+  port: 8080
+logging:
+  charset:
+    console: UTF-8
+    file: UTF-8
+  level:
+    root: INFO
+    org.springframework.jdbc: DEBUG
+    org.springframework.web: DEBUG
+    com.yuki.webapp.mapper: DEBUG
+    com.yuki.webapp.utils: DEBUG
+  file:
+    name: ./logs/app.log
