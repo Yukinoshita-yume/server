@@ -11,6 +11,6 @@ logging:
     root: INFO
     org.springframework.jdbc: DEBUG
     org.springframework.web: DEBUG
-    com.yuki.server.mapper: DEBUG
+    com.yuki.server.application: DEBUG
   file:
     name: ./logs/app.log
