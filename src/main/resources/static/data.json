@@ -1,17 +1,29 @@
-[
-  {
-  "productCode": "PROD1",
-  "name": "Laptop",
-  "fullPrice": 999.99
-  },
-  {
-    "productCode": "PROD2",
-    "name": "Mouse",
-    "fullPrice": 29.99
-  },
+{
+  "products": [
     {
-        "productCode": "PROD3",
-        "name": "Keyboard",
-        "fullPrice": 79.99
+      "productCode": "PROD1",
+      "name": "Laptop",
+      "fullPrice": 999.99
+    },
+    {
+      "productCode": "PROD2",
+      "name": "Mouse",
+      "fullPrice": 29.99
+    },
+    {
+      "productCode": "PROD3",
+      "name": "Keyboard",
+      "fullPrice": 79.99
     }
-]
+  ],
+  "promotions": [
+    {
+      "discountCode": "DISCOUNT10",
+      "discountPercent": 10
+    },
+    {
+      "discountCode": "DISCOUNT20",
+      "discountPercent": 20
+    }
+  ]
+}
