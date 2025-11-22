@@ -104,3 +104,328 @@ org.springframework.http.converter.HttpMessageNotReadableException: Required req
 2025-11-23T02:11:24.796+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2025-11-23T02:11:24.798+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=9a345bb6-321d-45e5-96e1-2215062f19a5, customerId=1234, products={PROD1=2}, d (truncated)...]
 2025-11-23T02:11:24.802+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:20:11.406+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/baskets/9a345bb6-321d-45e5-96e1-2215062f19a5/discount", parameters={}
+2025-11-23T02:20:11.412+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.exception.GlobalExceptionHandler#handleGenericException(Exception)
+2025-11-23T02:20:11.415+08:00 ERROR 33040 --- [server] [http-nio-8080-exec-1] c.y.s.exception.GlobalExceptionHandler   : Unexpected error: 
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-11-23T02:20:11.447+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:20:11.449+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=INTERNAL_ERROR, message=An unexpected error occurred)]
+2025-11-23T02:20:11.451+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-11-23T02:20:11.452+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-11-23T02:21:05.212+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/9a345bb6-321d-45e5-96e1-2215062f19a5/discount", parameters={}
+2025-11-23T02:21:05.213+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.BasketController#applyDiscount(String, ApplyDiscountRequest)
+2025-11-23T02:21:05.218+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [ApplyDiscountRequest(discountCode=DISCOUNT10)]
+2025-11-23T02:21:05.219+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:21:05.220+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=9a345bb6-321d-45e5-96e1-2215062f19a5, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T02:21:05.222+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:21:21.505+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/9a345bb6-321d-45e5-96e1-2215062f19a5/discount", parameters={}
+2025-11-23T02:21:21.506+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.BasketController#applyDiscount(String, ApplyDiscountRequest)
+2025-11-23T02:21:21.508+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [ApplyDiscountRequest(discountCode=DISCOUNT10)]
+2025-11-23T02:21:21.510+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:21:21.511+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=9a345bb6-321d-45e5-96e1-2215062f19a5, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T02:21:21.512+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:23:12.842+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/orders", parameters={}
+2025-11-23T02:23:12.843+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#getAllOrders()
+2025-11-23T02:23:12.846+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:23:12.847+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-11-23T02:23:12.851+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:24:43.662+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/9a345bb6-321d-45e5-96e1-2215062f19a5", parameters={}
+2025-11-23T02:24:43.664+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T02:24:43.665+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2025-11-23T02:24:43.666+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.exception.GlobalExceptionHandler#handleGenericException(Exception)
+2025-11-23T02:24:43.666+08:00 ERROR 33040 --- [server] [http-nio-8080-exec-10] c.y.s.exception.GlobalExceptionHandler   : Unexpected error: 
+
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.yuki.server.dto.OrderResponse> com.yuki.server.contoller.OrderController.checkout(java.lang.String,com.yuki.server.dto.CheckoutRequest)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:179) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-11-23T02:24:43.676+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:24:43.676+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=INTERNAL_ERROR, message=An unexpected error occurred)]
+2025-11-23T02:24:43.677+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.yuki.server.dto.OrderResponse> com.yuki.server.contoller.OrderController.checkout(java.lang.String,com.yuki.server.dto.CheckoutRequest)]
+2025-11-23T02:24:43.677+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-11-23T02:25:16.573+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/9a345bb6-321d-45e5-96e1-2215062f19a5", parameters={}
+2025-11-23T02:25:16.574+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T02:25:16.578+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665556, expiryDate=01/27)]
+2025-11-23T02:25:16.581+08:00  INFO 33040 --- [server] [http-nio-8080-exec-2] c.y.s.service.impl.OrderServiceImpl      : Successfully converted basket 9a345bb6-321d-45e5-96e1-2215062f19a5 to order 1f996ce1-6bde-4c38-9dc8-c5f4cd0534f8 for customer 1234 with total price 1799.982
+2025-11-23T02:25:16.586+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:25:16.589+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [OrderResponse(orderId=1f996ce1-6bde-4c38-9dc8-c5f4cd0534f8, customerId=1234, totalPrice=1799.982, cr (truncated)...]
+2025-11-23T02:25:16.593+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:25:46.473+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/orders", parameters={}
+2025-11-23T02:25:46.477+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#getAllOrders()
+2025-11-23T02:25:46.480+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:25:46.481+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[OrderResponse(orderId=1f996ce1-6bde-4c38-9dc8-c5f4cd0534f8, customerId=1234, totalPrice=1799.982, c (truncated)...]
+2025-11-23T02:25:46.484+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:27:31.167+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/9a345bb6-321d-45e5-96e1-2215062f19a5", parameters={}
+2025-11-23T02:27:31.168+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T02:27:31.169+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665559, expiryDate=01/27)]
+2025-11-23T02:27:31.170+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException)
+2025-11-23T02:27:31.171+08:00 ERROR 33040 --- [server] [http-nio-8080-exec-4] c.y.s.exception.GlobalExceptionHandler   : Resource not found: Basket not found with id: 9a345bb6-321d-45e5-96e1-2215062f19a5
+2025-11-23T02:27:31.172+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:27:31.172+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=RESOURCE_NOT_FOUND, message=Basket not found with id: 9a345bb6-321d-45e5-96e1-22 (truncated)...]
+2025-11-23T02:27:31.173+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yuki.server.exception.ResourceNotFoundException: Basket not found with id: 9a345bb6-321d-45e5-96e1-2215062f19a5]
+2025-11-23T02:27:31.174+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-23T02:27:53.081+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/9a345bb6-321d-45e5-96e1-2215062f19a5", parameters={}
+2025-11-23T02:27:53.082+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T02:27:53.084+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665556, expiryDate=01/27)]
+2025-11-23T02:27:53.085+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException)
+2025-11-23T02:27:53.086+08:00 ERROR 33040 --- [server] [http-nio-8080-exec-7] c.y.s.exception.GlobalExceptionHandler   : Resource not found: Basket not found with id: 9a345bb6-321d-45e5-96e1-2215062f19a5
+2025-11-23T02:27:53.087+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:27:53.088+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=RESOURCE_NOT_FOUND, message=Basket not found with id: 9a345bb6-321d-45e5-96e1-22 (truncated)...]
+2025-11-23T02:27:53.090+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yuki.server.exception.ResourceNotFoundException: Basket not found with id: 9a345bb6-321d-45e5-96e1-2215062f19a5]
+2025-11-23T02:27:53.091+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-23T02:28:02.304+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T02:28:02.305+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.ProductController#getAllProducts()
+2025-11-23T02:28:02.308+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:28:02.308+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T02:28:02.310+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:28:08.332+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/baskets?customerId=1234", parameters={masked}
+2025-11-23T02:28:08.335+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.BasketController#createBasket(String)
+2025-11-23T02:28:08.339+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:28:08.341+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=ad751998-51a7-4076-afd7-53579e2c214c, customerId=1234, products={}, discount (truncated)...]
+2025-11-23T02:28:08.341+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:28:27.572+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/ad751998-51a7-4076-afd7-53579e2c214c/products", parameters={}
+2025-11-23T02:28:27.573+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.BasketController#addProduct(String, AddProductRequest)
+2025-11-23T02:28:27.574+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddProductRequest(productCode=PROD1, quantity=2)]
+2025-11-23T02:28:27.576+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:28:27.576+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=ad751998-51a7-4076-afd7-53579e2c214c, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T02:28:27.577+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:28:35.113+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/ad751998-51a7-4076-afd7-53579e2c214c/discount", parameters={}
+2025-11-23T02:28:35.114+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.BasketController#applyDiscount(String, ApplyDiscountRequest)
+2025-11-23T02:28:35.129+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [ApplyDiscountRequest(discountCode=DISCOUNT10)]
+2025-11-23T02:28:35.131+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:28:35.131+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=ad751998-51a7-4076-afd7-53579e2c214c, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T02:28:35.132+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T02:28:44.888+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/ad751998-51a7-4076-afd7-53579e2c214c", parameters={}
+2025-11-23T02:28:44.889+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T02:28:44.891+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665559, expiryDate=01/27)]
+2025-11-23T02:28:44.892+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.exception.GlobalExceptionHandler#handlePaymentException(PaymentException)
+2025-11-23T02:28:44.892+08:00 ERROR 33040 --- [server] [http-nio-8080-exec-2] c.y.s.exception.GlobalExceptionHandler   : Payment error: Invalid card number. Card number failed Luhn algorithm validation.
+2025-11-23T02:28:44.894+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:28:44.895+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=PAYMENT_ERROR, message=Invalid card number. Card number failed Luhn algorithm va (truncated)...]
+2025-11-23T02:28:44.898+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yuki.server.exception.PaymentException: Invalid card number. Card number failed Luhn algorithm validation.]
+2025-11-23T02:28:44.900+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-11-23T02:28:56.406+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/orders", parameters={}
+2025-11-23T02:28:56.407+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.contoller.OrderController#getAllOrders()
+2025-11-23T02:28:56.408+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T02:28:56.409+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[OrderResponse(orderId=1f996ce1-6bde-4c38-9dc8-c5f4cd0534f8, customerId=1234, totalPrice=1799.982, c (truncated)...]
+2025-11-23T02:28:56.410+08:00 DEBUG 33040 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:04:33.266+08:00  INFO 33040 --- [server] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23T03:04:33.315+08:00  INFO 33040 --- [server] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-23T03:08:55.370+08:00  INFO 28128 --- [server] [main] com.yuki.server.ServerApplication        : Starting ServerApplication using Java 17.0.14 with PID 28128 (D:\paper\软件设计与架构\task2\server\target\classes started by 月灯 in D:\paper\软件设计与架构\task2\server)
+2025-11-23T03:08:55.371+08:00  INFO 28128 --- [server] [main] com.yuki.server.ServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-11-23T03:08:55.826+08:00  INFO 28128 --- [server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-23T03:08:55.835+08:00  INFO 28128 --- [server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-23T03:08:55.835+08:00  INFO 28128 --- [server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23T03:08:55.865+08:00  INFO 28128 --- [server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-23T03:08:55.865+08:00  INFO 28128 --- [server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 469 ms
+2025-11-23T03:08:55.985+08:00 DEBUG 28128 --- [server] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2025-11-23T03:08:56.005+08:00 DEBUG 28128 --- [server] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-23T03:08:56.016+08:00 DEBUG 28128 --- [server] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-23T03:08:56.042+08:00 DEBUG 28128 --- [server] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-23T03:08:56.085+08:00  INFO 28128 --- [server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-23T03:08:56.091+08:00  INFO 28128 --- [server] [main] com.yuki.server.ServerApplication        : Started ServerApplication in 1.013 seconds (process running for 1.164)
+2025-11-23T03:08:56.112+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Loaded product: PROD1 - Laptop
+2025-11-23T03:08:56.113+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Loaded product: PROD2 - Mouse
+2025-11-23T03:08:56.113+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Loaded product: PROD3 - Keyboard
+2025-11-23T03:08:56.113+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Successfully loaded 3 products
+2025-11-23T03:08:56.113+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Loaded promotion: DISCOUNT10 - 10.0%
+2025-11-23T03:08:56.114+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Loaded promotion: DISCOUNT20 - 20.0%
+2025-11-23T03:08:56.114+08:00  INFO 28128 --- [server] [main] c.y.s.infrastructure.config.DataLoader   : Successfully loaded 2 promotions
+2025-11-23T03:09:23.971+08:00  INFO 28128 --- [server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-23T03:09:23.972+08:00  INFO 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-23T03:09:23.973+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-11-23T03:09:23.973+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-11-23T03:09:23.974+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-11-23T03:09:23.975+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2b998bd7
+2025-11-23T03:09:23.979+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6f31c294
+2025-11-23T03:09:23.981+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-11-23T03:09:23.982+08:00  INFO 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-11-23T03:09:23.998+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T03:09:24.015+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.ProductController#getAllProducts()
+2025-11-23T03:09:24.054+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:09:24.059+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T03:09:24.115+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:09:33.145+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/orders", parameters={}
+2025-11-23T03:09:33.148+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.OrderController#getAllOrders()
+2025-11-23T03:09:33.153+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:09:33.155+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-11-23T03:09:33.160+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:09:39.421+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/baskets?customerId=1234", parameters={masked}
+2025-11-23T03:09:39.422+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.BasketController#createBasket(String)
+2025-11-23T03:09:39.440+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:09:39.441+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=75bfd4a3-5a84-4321-ad61-0185e652d540, customerId=1234, products={}, discount (truncated)...]
+2025-11-23T03:09:39.445+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:10:28.607+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T03:10:28.607+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.ProductController#getAllProducts()
+2025-11-23T03:10:28.608+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:10:28.609+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T03:10:28.611+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:10:47.234+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T03:10:47.235+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.ProductController#getAllProducts()
+2025-11-23T03:10:47.235+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:10:47.236+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T03:10:47.237+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:11:43.670+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/75bfd4a3-5a84-4321-ad61-0185e652d540/products", parameters={}
+2025-11-23T03:11:43.674+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.BasketController#addProduct(String, AddProductRequest)
+2025-11-23T03:11:43.728+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddProductRequest(productCode=PROD1, quantity=2)]
+2025-11-23T03:11:43.736+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:11:43.739+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=75bfd4a3-5a84-4321-ad61-0185e652d540, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T03:11:43.746+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:14:26.912+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T03:14:26.913+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.ProductController#getAllProducts()
+2025-11-23T03:14:26.914+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:14:26.914+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T03:14:26.916+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:14:27.601+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T03:14:27.602+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.ProductController#getAllProducts()
+2025-11-23T03:14:27.604+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:14:27.605+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T03:14:27.606+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:14:45.292+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/products", parameters={}
+2025-11-23T03:14:45.294+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.ProductController#getAllProducts()
+2025-11-23T03:14:45.297+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:14:45.297+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ProductResponse(productCode=PROD3, name=Keyboard, fullPrice=79.99), ProductResponse(productCode=PRO (truncated)...]
+2025-11-23T03:14:45.300+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:15:40.213+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/75bfd4a3-5a84-4321-ad61-0185e652d540/discount", parameters={}
+2025-11-23T03:15:40.214+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.BasketController#applyDiscount(String, ApplyDiscountRequest)
+2025-11-23T03:15:40.217+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [ApplyDiscountRequest(discountCode=DISCOUNT10)]
+2025-11-23T03:15:40.219+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:15:40.220+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=75bfd4a3-5a84-4321-ad61-0185e652d540, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T03:15:40.221+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:16:25.703+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/ad751998-51a7-4076-afd7-53579e2c214c", parameters={}
+2025-11-23T03:16:25.704+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T03:16:25.707+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665559, expiryDate=01/27)]
+2025-11-23T03:16:25.713+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.infrastructure.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException)
+2025-11-23T03:16:25.714+08:00 ERROR 28128 --- [server] [http-nio-8080-exec-4] c.y.s.i.e.GlobalExceptionHandler         : Resource not found: Basket not found with id: ad751998-51a7-4076-afd7-53579e2c214c
+2025-11-23T03:16:25.717+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:16:25.719+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=RESOURCE_NOT_FOUND, message=Basket not found with id: ad751998-51a7-4076-afd7-53 (truncated)...]
+2025-11-23T03:16:25.721+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yuki.server.domain.exception.ResourceNotFoundException: Basket not found with id: ad751998-51a7-4076-afd7-53579e2c214c]
+2025-11-23T03:16:25.722+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-23T03:17:39.333+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/75bfd4a3-5a84-4321-ad61-0185e652d540", parameters={}
+2025-11-23T03:17:39.335+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T03:17:39.336+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665556, expiryDate=01/27)]
+2025-11-23T03:17:39.337+08:00  INFO 28128 --- [server] [http-nio-8080-exec-7] c.y.s.a.service.impl.OrderServiceImpl    : Successfully converted basket 75bfd4a3-5a84-4321-ad61-0185e652d540 to order 44365740-2813-4c99-97dd-a19821b46dac for customer 1234 with total price 1799.982
+2025-11-23T03:17:39.343+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:17:39.344+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [OrderResponse(orderId=44365740-2813-4c99-97dd-a19821b46dac, customerId=1234, totalPrice=1799.982, cr (truncated)...]
+2025-11-23T03:17:39.346+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:18:56.463+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/baskets?customerId=1234", parameters={masked}
+2025-11-23T03:18:56.464+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.BasketController#createBasket(String)
+2025-11-23T03:18:56.465+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:18:56.465+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=ebf1a78a-007f-4d1a-ba83-d06cdf61d2db, customerId=1234, products={}, discount (truncated)...]
+2025-11-23T03:18:56.467+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:19:14.112+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : PUT "/api/baskets/ebf1a78a-007f-4d1a-ba83-d06cdf61d2db/products", parameters={}
+2025-11-23T03:19:14.113+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.BasketController#addProduct(String, AddProductRequest)
+2025-11-23T03:19:14.114+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddProductRequest(productCode=PROD1, quantity=2)]
+2025-11-23T03:19:14.115+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:19:14.117+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [BasketResponse(basketId=ebf1a78a-007f-4d1a-ba83-d06cdf61d2db, customerId=1234, products={PROD1=2}, d (truncated)...]
+2025-11-23T03:19:14.119+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-23T03:19:24.121+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/orders/checkout/ebf1a78a-007f-4d1a-ba83-d06cdf61d2db", parameters={}
+2025-11-23T03:19:24.126+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.OrderController#checkout(String, CheckoutRequest)
+2025-11-23T03:19:24.129+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest(cardNumber=4000056655665559, expiryDate=01/27)]
+2025-11-23T03:19:24.132+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.yuki.server.infrastructure.exception.GlobalExceptionHandler#handlePaymentException(PaymentException)
+2025-11-23T03:19:24.135+08:00 ERROR 28128 --- [server] [http-nio-8080-exec-1] c.y.s.i.e.GlobalExceptionHandler         : Payment error: Invalid card number. Card number failed Luhn algorithm validation.
+2025-11-23T03:19:24.136+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:19:24.137+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(error=PAYMENT_ERROR, message=Invalid card number. Card number failed Luhn algorithm va (truncated)...]
+2025-11-23T03:19:24.140+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yuki.server.domain.exception.PaymentException: Invalid card number. Card number failed Luhn algorithm validation.]
+2025-11-23T03:19:24.143+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-11-23T03:19:27.875+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/orders", parameters={}
+2025-11-23T03:19:27.876+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yuki.server.presentation.controller.OrderController#getAllOrders()
+2025-11-23T03:19:27.877+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-11-23T03:19:27.878+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[OrderResponse(orderId=44365740-2813-4c99-97dd-a19821b46dac, customerId=1234, totalPrice=1799.982, c (truncated)...]
+2025-11-23T03:19:27.880+08:00 DEBUG 28128 --- [server] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
