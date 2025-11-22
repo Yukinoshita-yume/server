@@ -8,7 +8,7 @@
 
 ## 架构设计
 
-本项目采用**Clean Architecture（清洁架构）**原则，将代码分为四个主要层次：
+本项目采用 **Clean Architecture(清洁架构)** 原则，将代码分为四个主要层次：
 
 1. **Presentation Layer（表示层）**: 处理HTTP请求和响应
 2. **Application Layer（应用层）**: 包含业务逻辑、服务接口和实现、Repository接口、DTO
